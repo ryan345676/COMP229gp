@@ -1,0 +1,33 @@
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th><th>Title</th><th>Type</th><th>Start Date</th><th>End Date</th><th>Question 1</th><th>Question 2</th><th>Question 3</th><th>Question 4</th><th>Question 5</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of getSurveys()">
+            <td>{{p.id}}</td>
+            <td>{{p.type}}</td>
+            <td>{{p.startdate}}</td>
+            <td>{{p.enddate}}</td>
+            <td>{{p.q1}}</td>
+            <td>{{p.q2}}</td>
+            <td>{{p.q3}}</td>
+            <td>{{p.q4}}</td>
+            <td>{{p.q5}}</td>
+            <td>
+                <button class="btn btn-sm btn-warning m-1"
+                        [routerLink]="['/admin/main/surveys/edit', p.id]">
+                    Edit
+                </button>
+                <button class="btn btn-sm btn-danger" (click)="deleteSurvey(p.id)">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" routerLink="/admin/main/surveys/create">
+    Create New Survey
+</button>
