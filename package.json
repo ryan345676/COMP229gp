@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"json-server data.js -p 3500 -m authMiddleware.js\" \"ng serve\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "json":"json-server data.js -p 3500 -m authMiddleware.js"
+    "json": "json-server data.js -p 3500 -m authMiddleware.js"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +20,12 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@fortawesome/fontawesome-free": "^5.12.1",
+    "body-parser": "^1.20.1",
     "bootstrap": "^4.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.5",
     "rxjs": "~7.5.0",
+    "save": "^2.9.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -39,5 +43,20 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.",
+  "main": "authMiddleware.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan345676/COMP229gp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan345676/COMP229gp/issues"
+  },
+  "homepage": "https://github.com/ryan345676/COMP229gp#readme",
+  "keywords": [
+    "mongodb"
+  ]
 }
