@@ -59,5 +59,9 @@
   "homepage": "https://github.com/ryan345676/COMP229gp#readme",
   "keywords": [
     "mongodb"
-  ]
+  ],
+  "engines": {
+    "node": "18.12.1",
+    "npm": "8.19.2"
+  }
 }
